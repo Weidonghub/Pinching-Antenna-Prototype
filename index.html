@@ -19,8 +19,8 @@
       --background: #ffffff;
       --soft-background: #f5f5f7;
       --border: #e5e5e7;
-      --blue: #0071e3;
-      --blue-hover: #0077ed;
+      --blue: #0066cc;
+      --blue-hover: #004f9e;
     }
 
     * {
@@ -50,32 +50,33 @@
     }
 
     .container {
-      width: min(1080px, calc(100% - 48px));
+      width: min(1060px, calc(100% - 48px));
       margin: 0 auto;
     }
 
-    /* --------------------------------------------------
+    /* ==================================================
        Navigation
-    -------------------------------------------------- */
+    ================================================== */
 
     nav {
-      height: 52px;
+      height: 54px;
       display: flex;
       align-items: center;
-
-      background: rgba(255, 255, 255, 0.88);
-      backdrop-filter: blur(18px);
-      -webkit-backdrop-filter: blur(18px);
-
-      border-bottom: 1px solid rgba(0, 0, 0, 0.06);
 
       position: sticky;
       top: 0;
       z-index: 100;
+
+      background: rgba(255, 255, 255, 0.90);
+
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+
+      border-bottom: 1px solid rgba(0, 0, 0, 0.06);
     }
 
     .nav-inner {
-      width: min(1080px, calc(100% - 48px));
+      width: min(1060px, calc(100% - 48px));
       margin: 0 auto;
 
       display: flex;
@@ -84,10 +85,11 @@
     }
 
     .nav-title {
-      font-size: 14px;
-      font-weight: 600;
       color: var(--text);
       text-decoration: none;
+
+      font-size: 14px;
+      font-weight: 600;
     }
 
     .nav-links {
@@ -96,9 +98,10 @@
     }
 
     .nav-links a {
-      font-size: 13px;
       color: var(--secondary);
       text-decoration: none;
+
+      font-size: 13px;
       transition: color 0.2s ease;
     }
 
@@ -106,46 +109,50 @@
       color: var(--text);
     }
 
-    /* --------------------------------------------------
+
+    /* ==================================================
        Hero
-    -------------------------------------------------- */
+    ================================================== */
 
     .hero {
       text-align: center;
-      padding: 110px 0 90px;
+      padding: 105px 0 90px;
     }
 
     .eyebrow {
       margin-bottom: 14px;
 
-      font-size: 16px;
-      font-weight: 600;
       color: var(--blue);
+
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: 0.01em;
     }
 
     .hero h1 {
+      max-width: 900px;
       margin: 0 auto;
 
-      max-width: 900px;
+      font-size: clamp(44px, 6.5vw, 64px);
+      line-height: 1.05;
 
-      font-size: clamp(46px, 7vw, 74px);
-      line-height: 1.03;
       letter-spacing: -0.045em;
       font-weight: 700;
     }
 
     .hero-description {
       max-width: 720px;
-      margin: 28px auto 0;
+      margin: 26px auto 0;
 
-      font-size: clamp(19px, 2.5vw, 24px);
-      line-height: 1.45;
-      letter-spacing: -0.01em;
       color: var(--secondary);
+
+      font-size: clamp(19px, 2.4vw, 23px);
+      line-height: 1.5;
+      letter-spacing: -0.01em;
     }
 
     .hero-tags {
-      margin-top: 34px;
+      margin-top: 32px;
 
       display: flex;
       justify-content: center;
@@ -154,121 +161,138 @@
     }
 
     .tag {
-      display: inline-flex;
-      align-items: center;
-
-      padding: 8px 14px;
+      padding: 7px 13px;
 
       border-radius: 999px;
       background: var(--soft-background);
 
+      color: #515154;
+
       font-size: 13px;
       font-weight: 500;
-      color: #515154;
     }
 
-    /* --------------------------------------------------
-       Sections
-    -------------------------------------------------- */
+
+    /* ==================================================
+       General Sections
+    ================================================== */
 
     section {
-      padding: 90px 0;
+      padding: 88px 0;
     }
 
     .section-header {
-      max-width: 760px;
-      margin-bottom: 42px;
+      max-width: 780px;
+      margin-bottom: 40px;
     }
 
     .section-label {
       margin-bottom: 10px;
 
-      font-size: 15px;
-      font-weight: 600;
       color: var(--blue);
+
+      font-size: 14px;
+      font-weight: 600;
     }
 
     h2 {
       margin: 0;
 
-      font-size: clamp(34px, 5vw, 48px);
-      line-height: 1.08;
+      font-size: clamp(32px, 4.5vw, 44px);
+      line-height: 1.1;
+
       letter-spacing: -0.035em;
     }
 
     .section-description {
-      max-width: 720px;
-      margin: 18px 0 0;
+      max-width: 740px;
+      margin: 17px 0 0;
+
+      color: var(--secondary);
 
       font-size: 18px;
-      line-height: 1.6;
-      color: var(--secondary);
+      line-height: 1.65;
     }
 
-    /* --------------------------------------------------
+
+    /* ==================================================
        Demo Cards
-    -------------------------------------------------- */
+    ================================================== */
 
     .demo-card {
       overflow: hidden;
 
       border: 1px solid var(--border);
-      border-radius: 24px;
-      background: #fff;
+      border-radius: 20px;
+
+      background: #ffffff;
 
       box-shadow:
-        0 2px 8px rgba(0, 0, 0, 0.03),
-        0 20px 55px rgba(0, 0, 0, 0.06);
+        0 2px 8px rgba(0, 0, 0, 0.025),
+        0 18px 45px rgba(0, 0, 0, 0.055);
     }
 
     .demo-card + .demo-card {
-      margin-top: 64px;
+      margin-top: 56px;
     }
 
     .demo-info {
-      padding: 30px 34px 28px;
-
-      display: flex;
-      justify-content: space-between;
-      gap: 30px;
-      align-items: flex-start;
+      padding: 28px 32px 26px;
     }
 
-    .demo-title-area {
-      flex: 1;
+    .demo-labels {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+
+      margin-bottom: 12px;
     }
 
     .frequency-badge {
       display: inline-flex;
       align-items: center;
 
-      margin-bottom: 12px;
-      padding: 6px 11px;
+      padding: 5px 10px;
 
       border-radius: 999px;
 
       background: #eaf4ff;
       color: #0066cc;
 
-      font-size: 13px;
+      font-size: 12px;
       font-weight: 600;
-      letter-spacing: 0.01em;
+    }
+
+    .demo-role {
+      display: inline-flex;
+      align-items: center;
+
+      padding: 5px 10px;
+
+      border-radius: 999px;
+
+      background: var(--soft-background);
+      color: #6e6e73;
+
+      font-size: 12px;
+      font-weight: 500;
     }
 
     .demo-info h3 {
       margin: 0;
 
-      font-size: 25px;
+      font-size: 24px;
       letter-spacing: -0.02em;
     }
 
     .demo-info p {
-      max-width: 650px;
+      max-width: 720px;
       margin: 9px 0 0;
 
-      font-size: 16px;
-      line-height: 1.55;
       color: var(--secondary);
+
+      font-size: 16px;
+      line-height: 1.6;
     }
 
     .video-container {
@@ -283,9 +307,10 @@
       background: #000;
     }
 
-    /* --------------------------------------------------
-       Experimental Prototype
-    -------------------------------------------------- */
+
+    /* ==================================================
+       Prototype
+    ================================================== */
 
     .prototype-section {
       background: var(--soft-background);
@@ -294,12 +319,12 @@
     .image-card {
       overflow: hidden;
 
-      border-radius: 24px;
+      border-radius: 20px;
       background: #fff;
 
       box-shadow:
-        0 2px 8px rgba(0, 0, 0, 0.03),
-        0 20px 55px rgba(0, 0, 0, 0.06);
+        0 2px 8px rgba(0, 0, 0, 0.025),
+        0 18px 45px rgba(0, 0, 0, 0.055);
     }
 
     .prototype-image {
@@ -307,31 +332,94 @@
       display: block;
     }
 
-    /* --------------------------------------------------
+
+    /* ==================================================
+       Contributions
+    ================================================== */
+
+    .contribution-intro {
+      max-width: 800px;
+
+      margin: 0 0 36px;
+
+      color: #424245;
+
+      font-size: 19px;
+      line-height: 1.65;
+    }
+
+    .contribution-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+
+      gap: 20px;
+    }
+
+    .contribution-card {
+      padding: 28px;
+
+      border: 1px solid var(--border);
+      border-radius: 18px;
+
+      background: #ffffff;
+    }
+
+    .contribution-number {
+      margin-bottom: 18px;
+
+      color: var(--blue);
+
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .contribution-card h3 {
+      margin: 0 0 10px;
+
+      font-size: 21px;
+      letter-spacing: -0.02em;
+    }
+
+    .contribution-card p {
+      margin: 0;
+
+      color: var(--secondary);
+
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+
+    /* ==================================================
        Publications
-    -------------------------------------------------- */
+    ================================================== */
+
+    .publications-section {
+      background: var(--soft-background);
+    }
 
     .publication-list {
-      border-top: 1px solid var(--border);
+      border-top: 1px solid #d7d7d9;
     }
 
     .publication {
-      padding: 30px 0;
+      padding: 29px 0;
 
       display: grid;
       grid-template-columns: 1fr auto;
+
       gap: 30px;
 
-      border-bottom: 1px solid var(--border);
+      border-bottom: 1px solid #d7d7d9;
     }
 
     .publication-title {
+      max-width: 800px;
       margin: 0;
 
-      max-width: 800px;
-
       font-size: 19px;
-      line-height: 1.45;
+      line-height: 1.5;
+
       font-weight: 600;
       letter-spacing: -0.01em;
     }
@@ -339,8 +427,9 @@
     .publication-source {
       margin: 8px 0 0;
 
-      font-size: 15px;
       color: var(--secondary);
+
+      font-size: 14px;
     }
 
     .publication-link {
@@ -350,6 +439,7 @@
 
       color: var(--blue);
       text-decoration: none;
+
       font-size: 15px;
       font-weight: 500;
     }
@@ -359,29 +449,32 @@
       text-decoration: underline;
     }
 
-    /* --------------------------------------------------
+
+    /* ==================================================
        Footer
-    -------------------------------------------------- */
+    ================================================== */
 
     footer {
-      padding: 45px 0;
+      padding: 42px 0;
 
       border-top: 1px solid var(--border);
 
       text-align: center;
+
       color: #86868b;
       font-size: 13px;
     }
 
-    /* --------------------------------------------------
+
+    /* ==================================================
        Mobile
-    -------------------------------------------------- */
+    ================================================== */
 
     @media (max-width: 720px) {
 
       .container,
       .nav-inner {
-        width: min(100% - 32px, 1080px);
+        width: min(100% - 32px, 1060px);
       }
 
       .nav-links {
@@ -389,15 +482,15 @@
       }
 
       .hero {
-        padding: 78px 0 64px;
+        padding: 76px 0 62px;
       }
 
       .hero-description {
-        margin-top: 22px;
+        margin-top: 21px;
       }
 
       section {
-        padding: 64px 0;
+        padding: 62px 0;
       }
 
       .section-header {
@@ -405,60 +498,89 @@
       }
 
       .demo-card {
-        border-radius: 18px;
+        border-radius: 16px;
       }
 
       .demo-card + .demo-card {
-        margin-top: 42px;
+        margin-top: 40px;
       }
 
       .demo-info {
-        padding: 24px 22px;
+        padding: 23px 21px;
       }
 
       .demo-info h3 {
-        font-size: 22px;
+        font-size: 21px;
       }
 
       .image-card {
-        border-radius: 18px;
+        border-radius: 16px;
+      }
+
+      .contribution-grid {
+        grid-template-columns: 1fr;
       }
 
       .publication {
         grid-template-columns: 1fr;
-        gap: 14px;
+        gap: 13px;
       }
 
       .publication-link {
         justify-self: start;
       }
     }
+
   </style>
 </head>
 
 
 <body>
 
-  <!-- Navigation -->
+  <!-- ==================================================
+       Navigation
+  =================================================== -->
 
   <nav>
+
     <div class="nav-inner">
 
-      <a class="nav-title" href="#">
+      <a
+        class="nav-title"
+        href="#"
+      >
         Pinching Antenna Prototype
       </a>
 
       <div class="nav-links">
-        <a href="#demo">Demo</a>
-        <a href="#prototype">Prototype</a>
-        <a href="#publications">Publications</a>
+
+        <a href="#demo">
+          Demo
+        </a>
+
+        <a href="#prototype">
+          Prototype
+        </a>
+
+        <a href="#contributions">
+          Contributions
+        </a>
+
+        <a href="#publications">
+          Publications
+        </a>
+
       </div>
 
     </div>
+
   </nav>
 
 
-  <!-- Hero -->
+
+  <!-- ==================================================
+       Hero
+  =================================================== -->
 
   <header class="hero">
 
@@ -478,10 +600,23 @@
       </p>
 
       <div class="hero-tags">
-        <span class="tag">60 GHz</span>
-        <span class="tag">Pinching Antenna</span>
-        <span class="tag">Wireless Video Transmission</span>
-        <span class="tag">Experimental Prototype</span>
+
+        <span class="tag">
+          60 GHz
+        </span>
+
+        <span class="tag">
+          Pinching Antenna
+        </span>
+
+        <span class="tag">
+          CP-OFDM
+        </span>
+
+        <span class="tag">
+          Wireless Video Transmission
+        </span>
+
       </div>
 
     </div>
@@ -489,7 +624,9 @@
   </header>
 
 
+
   <main>
+
 
     <!-- ==================================================
          Demo
@@ -506,7 +643,7 @@
           </div>
 
           <h2>
-            Over-the-air video transmission.
+            Over-the-air video transmission
           </h2>
 
           <p class="section-description">
@@ -517,29 +654,36 @@
         </div>
 
 
-        <!-- 60 GHz Demo -->
+
+        <!-- ==================================================
+             60 GHz Demo
+        =================================================== -->
 
         <article class="demo-card">
 
           <div class="demo-info">
 
-            <div class="demo-title-area">
+            <div class="demo-labels">
 
               <span class="frequency-badge">
                 60 GHz
               </span>
 
-              <h3>
-                Millimeter-Wave Prototype
-              </h3>
-
-              <p>
-                Real-time wireless video transmission using a
-                pinching antenna at the transmitter and a horn
-                antenna at the receiver.
-              </p>
+              <span class="demo-role">
+                Primary Demo
+              </span>
 
             </div>
+
+            <h3>
+              Millimeter-Wave Prototype
+            </h3>
+
+            <p>
+              Real-time wireless video transmission using a
+              pinching antenna at the transmitter and a horn
+              antenna at the receiver.
+            </p>
 
           </div>
 
@@ -551,9 +695,14 @@
               preload="metadata"
               poster="demo.png"
             >
-              <source src="demo.mp4" type="video/mp4">
+
+              <source
+                src="demo.mp4"
+                type="video/mp4"
+              >
 
               Your browser does not support HTML5 video.
+
             </video>
 
           </div>
@@ -561,29 +710,36 @@
         </article>
 
 
-        <!-- 6 GHz Demo -->
+
+        <!-- ==================================================
+             6 GHz Demo
+        =================================================== -->
 
         <article class="demo-card">
 
           <div class="demo-info">
 
-            <div class="demo-title-area">
+            <div class="demo-labels">
 
               <span class="frequency-badge">
                 6 GHz
               </span>
 
-              <h3>
-                Microwave Prototype
-              </h3>
-
-              <p>
-                An additional real-time wireless video transmission
-                demonstration using the pinching-antenna prototype
-                operating at 6 GHz.
-              </p>
+              <span class="demo-role">
+                Supplementary Demo
+              </span>
 
             </div>
+
+            <h3>
+              Microwave Prototype
+            </h3>
+
+            <p>
+              An additional real-time wireless video transmission
+              demonstration using the pinching-antenna prototype
+              operating at 6 GHz.
+            </p>
 
           </div>
 
@@ -595,9 +751,14 @@
               preload="metadata"
               poster="demo_6G.jpg"
             >
-              <source src="demo_6G.mp4" type="video/mp4">
+
+              <source
+                src="demo_6G.mp4"
+                type="video/mp4"
+              >
 
               Your browser does not support HTML5 video.
+
             </video>
 
           </div>
@@ -607,6 +768,7 @@
       </div>
 
     </section>
+
 
 
     <!-- ==================================================
@@ -623,20 +785,20 @@
         <div class="section-header">
 
           <div class="section-label">
-            Experimental Setup
+            Experimental System
           </div>
 
           <h2>
-            From concept to working prototype.
+            Prototype implementation
           </h2>
 
           <p class="section-description">
             Experimental implementation of the pinching-antenna
-            wireless communication system.
+            wireless communication system for real-time video
+            transmission.
           </p>
 
         </div>
-
 
         <div class="image-card">
 
@@ -653,11 +815,97 @@
     </section>
 
 
+
+    <!-- ==================================================
+         My Contributions
+    =================================================== -->
+
+    <section id="contributions">
+
+      <div class="container">
+
+        <div class="section-header">
+
+          <div class="section-label">
+            Technical Contributions
+          </div>
+
+          <h2>
+            My Contributions
+          </h2>
+
+        </div>
+
+        <p class="contribution-intro">
+          Designed and implemented the baseband and
+          intermediate-frequency (IF) subsystems of the CP-OFDM
+          transceiver, and contributed to the design of the
+          pinching antenna.
+        </p>
+
+
+        <div class="contribution-grid">
+
+
+          <!-- CP-OFDM -->
+
+          <div class="contribution-card">
+
+            <div class="contribution-number">
+              01
+            </div>
+
+            <h3>
+              CP-OFDM Transceiver
+            </h3>
+
+            <p>
+              Designed and implemented the transmitter and receiver
+              baseband and intermediate-frequency (IF) subsystems
+              for the CP-OFDM wireless link.
+            </p>
+
+          </div>
+
+
+
+          <!-- Pinching Antenna -->
+
+          <div class="contribution-card">
+
+            <div class="contribution-number">
+              02
+            </div>
+
+            <h3>
+              Pinching Antenna Design
+            </h3>
+
+            <p>
+              Contributed to the design of the pinching antenna
+              used in the experimental wireless transmission
+              prototype.
+            </p>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
     <!-- ==================================================
          Publications
     =================================================== -->
 
-    <section id="publications">
+    <section
+      id="publications"
+      class="publications-section"
+    >
 
       <div class="container">
 
@@ -672,9 +920,9 @@
           </h2>
 
           <p class="section-description">
-            Research publications associated with the design,
-            radiation characteristics, and experimental validation
-            of pinching-antenna systems.
+            Research publications related to the radiation
+            characteristics, geometry-aware design, and
+            experimental validation of pinching-antenna systems.
           </p>
 
         </div>
@@ -682,7 +930,8 @@
 
         <div class="publication-list">
 
-          <!-- IEEE -->
+
+          <!-- IEEE Publication -->
 
           <article class="publication">
 
@@ -694,7 +943,7 @@
               </p>
 
               <p class="publication-source">
-                IEEE Journal Publication
+                IEEE Xplore
               </p>
 
             </div>
@@ -705,13 +954,14 @@
               target="_blank"
               rel="noopener noreferrer"
             >
-              IEEE Xplore ↗
+              View Publication ↗
             </a>
 
           </article>
 
 
-          <!-- arXiv -->
+
+          <!-- arXiv Publication -->
 
           <article class="publication">
 
@@ -723,7 +973,7 @@
               </p>
 
               <p class="publication-source">
-                arXiv Preprint
+                arXiv
               </p>
 
             </div>
@@ -734,10 +984,11 @@
               target="_blank"
               rel="noopener noreferrer"
             >
-              arXiv ↗
+              View Preprint ↗
             </a>
 
           </article>
+
 
         </div>
 
@@ -745,15 +996,19 @@
 
     </section>
 
+
   </main>
 
 
-  <!-- Footer -->
+
+  <!-- ==================================================
+       Footer
+  =================================================== -->
 
   <footer>
 
     <div class="container">
-      Pinching Antenna Prototype
+      Pinching Antenna Prototype · Research Prototype Portfolio
     </div>
 
   </footer>
