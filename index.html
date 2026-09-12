@@ -57,7 +57,6 @@
         sans-serif;
 
       -webkit-font-smoothing: antialiased;
-
       line-height: 1.5;
     }
 
@@ -91,7 +90,7 @@
       top: 0;
       z-index: 100;
 
-      background: rgba(255, 255, 255, 0.90);
+      background: rgba(255, 255, 255, 0.92);
 
       backdrop-filter: blur(18px);
       -webkit-backdrop-filter: blur(18px);
@@ -141,17 +140,7 @@
 
     .hero {
       padding: 100px 0 88px;
-
       text-align: center;
-    }
-
-    .eyebrow {
-      margin-bottom: 14px;
-
-      color: var(--blue);
-
-      font-size: 15px;
-      font-weight: 600;
     }
 
     .hero h1 {
@@ -230,15 +219,6 @@
     .section-header {
       max-width: 820px;
       margin-bottom: 40px;
-    }
-
-    .section-label {
-      margin-bottom: 10px;
-
-      color: var(--blue);
-
-      font-size: 14px;
-      font-weight: 600;
     }
 
     h2 {
@@ -348,7 +328,6 @@
       margin: 0;
 
       font-size: 24px;
-
       letter-spacing: -0.02em;
     }
 
@@ -397,6 +376,10 @@
     /* ==================================================
        Contributions
     ================================================== */
+
+    .contributions-section {
+      background: var(--soft-background);
+    }
 
     .contribution-intro {
       max-width: 820px;
@@ -447,7 +430,6 @@
       margin: 0;
 
       font-size: 22px;
-
       letter-spacing: -0.02em;
     }
 
@@ -480,12 +462,8 @@
 
 
     /* ==================================================
-       Experimental System
+       System Architecture
     ================================================== */
-
-    .system-section {
-      background: var(--soft-background);
-    }
 
     .system-flow {
       margin-top: 42px;
@@ -612,7 +590,6 @@
 
     .prototype-image {
       width: 100%;
-
       display: block;
     }
 
@@ -622,7 +599,7 @@
     ================================================== */
 
     .publications-section {
-      background: #ffffff;
+      background: var(--soft-background);
     }
 
     .publication-list {
@@ -728,7 +705,6 @@
 
       .flow-arrow {
         height: 24px;
-
         transform: rotate(90deg);
       }
     }
@@ -775,7 +751,6 @@
 
       .publication {
         grid-template-columns: 1fr;
-
         gap: 13px;
       }
 
@@ -809,19 +784,19 @@
       <div class="nav-links">
 
         <a href="#demo">
-          Demo / 演示
+          Demo
         </a>
 
         <a href="#contributions">
-          Contributions / 贡献
+          Contributions
         </a>
 
         <a href="#system">
-          System / 系统
+          System
         </a>
 
         <a href="#publications">
-          Publications / 论文
+          Publications
         </a>
 
       </div>
@@ -839,10 +814,6 @@
   <header class="hero">
 
     <div class="container">
-
-      <div class="eyebrow">
-        Experimental Wireless Prototype · 实验无线通信原型
-      </div>
 
       <h1>
         Pinching Antenna Prototype
@@ -874,7 +845,7 @@
         </span>
 
         <span class="tag">
-          Pinching Antenna · 夹持天线
+          Pinching Antenna
         </span>
 
         <span class="tag">
@@ -886,7 +857,7 @@
         </span>
 
         <span class="tag">
-          Wireless Video Transmission · 无线视频传输
+          Wireless Video Transmission
         </span>
 
       </div>
@@ -909,10 +880,6 @@
       <div class="container">
 
         <div class="section-header">
-
-          <div class="section-label">
-            Prototype Demonstrations · 原型演示
-          </div>
 
           <h2>
             Over-the-air video transmission
@@ -941,7 +908,7 @@
 
 
 
-        <!-- 60 GHz -->
+        <!-- 60 GHz Demo -->
 
         <article class="demo-card">
 
@@ -954,7 +921,7 @@
               </span>
 
               <span class="demo-role">
-                Primary Demo · 主要演示
+                Primary Demo
               </span>
 
             </div>
@@ -1010,7 +977,7 @@
 
 
 
-        <!-- 6 GHz -->
+        <!-- 6 GHz Demo -->
 
         <article class="demo-card">
 
@@ -1023,7 +990,7 @@
               </span>
 
               <span class="demo-role">
-                Supplementary Demo · 补充演示
+                Supplementary Demo
               </span>
 
             </div>
@@ -1086,15 +1053,14 @@
          My Contributions
     ================================================== -->
 
-    <section id="contributions">
+    <section
+      id="contributions"
+      class="contributions-section"
+    >
 
       <div class="container">
 
         <div class="section-header">
-
-          <div class="section-label">
-            Technical Contributions · 技术贡献
-          </div>
 
           <h2>
             My Contributions
@@ -1127,6 +1093,8 @@
 
         <div class="contribution-grid">
 
+
+          <!-- CP-OFDM -->
 
           <div class="contribution-card">
 
@@ -1162,6 +1130,8 @@
           </div>
 
 
+
+          <!-- Pinching Antenna -->
 
           <div class="contribution-card">
 
@@ -1205,24 +1175,17 @@
 
 
     <!-- ==================================================
-         Experimental System
+         System Architecture
     ================================================== -->
 
-    <section
-      id="system"
-      class="system-section"
-    >
+    <section id="system">
 
       <div class="container">
 
         <div class="section-header">
 
-          <div class="section-label">
-            Experimental System · 实验系统
-          </div>
-
           <h2>
-            System architecture
+            System Architecture
           </h2>
 
           <div
@@ -1420,12 +1383,14 @@
 
 
 
+        <!-- Prototype Image -->
+
         <div class="prototype-image-block">
 
           <div class="subsection-heading">
 
             <h3>
-              Experimental prototype
+              Experimental Prototype
             </h3>
 
             <div
@@ -1468,10 +1433,6 @@
 
         <div class="section-header">
 
-          <div class="section-label">
-            Research · 研究成果
-          </div>
-
           <h2>
             Related Publications
           </h2>
@@ -1503,6 +1464,8 @@
         <div class="publication-list">
 
 
+          <!-- IEEE Publication -->
+
           <article class="publication">
 
             <div>
@@ -1516,8 +1479,7 @@
                 class="publication-title-zh zh"
                 lang="zh-CN"
               >
-                夹持天线的几何依赖辐射特性：
-                理论、仿真与测量
+                夹持天线的几何依赖辐射特性：理论、仿真与测量
               </p>
 
               <p class="publication-source">
@@ -1538,6 +1500,8 @@
           </article>
 
 
+
+          <!-- arXiv Publication -->
 
           <article class="publication">
 
