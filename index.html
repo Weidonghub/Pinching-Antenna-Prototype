@@ -17,11 +17,18 @@
       --text: #1d1d1f;
       --secondary: #6e6e73;
       --tertiary: #86868b;
+
       --background: #ffffff;
       --soft-background: #f5f5f7;
+
       --border: #e5e5e7;
+      --border-strong: #d7d7d9;
+
       --blue: #0066cc;
       --blue-hover: #004f9e;
+      --blue-soft: #eaf4ff;
+
+      --card-radius: 20px;
     }
 
     * {
@@ -34,6 +41,7 @@
 
     body {
       margin: 0;
+
       background: var(--background);
       color: var(--text);
 
@@ -49,6 +57,7 @@
         sans-serif;
 
       -webkit-font-smoothing: antialiased;
+
       line-height: 1.5;
     }
 
@@ -74,6 +83,7 @@
 
     nav {
       height: 56px;
+
       display: flex;
       align-items: center;
 
@@ -116,6 +126,7 @@
       text-decoration: none;
 
       font-size: 13px;
+
       transition: color 0.2s ease;
     }
 
@@ -129,8 +140,9 @@
     ================================================== */
 
     .hero {
-      text-align: center;
       padding: 100px 0 88px;
+
+      text-align: center;
     }
 
     .eyebrow {
@@ -161,6 +173,7 @@
 
       font-size: clamp(23px, 3vw, 30px);
       font-weight: 500;
+
       letter-spacing: 0.03em;
     }
 
@@ -172,6 +185,7 @@
 
       font-size: clamp(19px, 2.4vw, 23px);
       line-height: 1.5;
+
       letter-spacing: -0.01em;
     }
 
@@ -191,6 +205,7 @@
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
+
       gap: 10px;
     }
 
@@ -198,8 +213,8 @@
       padding: 7px 13px;
 
       border-radius: 999px;
-      background: var(--soft-background);
 
+      background: var(--soft-background);
       color: #515154;
 
       font-size: 13px;
@@ -216,7 +231,7 @@
     }
 
     .section-header {
-      max-width: 800px;
+      max-width: 820px;
       margin-bottom: 40px;
     }
 
@@ -248,7 +263,7 @@
     }
 
     .section-description {
-      max-width: 740px;
+      max-width: 760px;
       margin: 17px 0 0;
 
       color: var(--secondary);
@@ -258,7 +273,7 @@
     }
 
     .section-description-zh {
-      max-width: 740px;
+      max-width: 760px;
       margin: 7px 0 0;
 
       color: var(--tertiary);
@@ -276,7 +291,7 @@
       overflow: hidden;
 
       border: 1px solid var(--border);
-      border-radius: 20px;
+      border-radius: var(--card-radius);
 
       background: #ffffff;
 
@@ -296,6 +311,7 @@
     .demo-labels {
       display: flex;
       flex-wrap: wrap;
+
       gap: 8px;
 
       margin-bottom: 12px;
@@ -309,8 +325,8 @@
 
       border-radius: 999px;
 
-      background: #eaf4ff;
-      color: #0066cc;
+      background: var(--blue-soft);
+      color: var(--blue);
 
       font-size: 12px;
       font-weight: 600;
@@ -335,6 +351,7 @@
       margin: 0;
 
       font-size: 24px;
+
       letter-spacing: -0.02em;
     }
 
@@ -348,7 +365,7 @@
     }
 
     .demo-info p {
-      max-width: 740px;
+      max-width: 760px;
       margin: 10px 0 0;
 
       color: var(--secondary);
@@ -375,22 +392,134 @@
       max-height: 650px;
 
       display: block;
+
       background: #000;
     }
 
 
     /* ==================================================
-       Prototype
+       Experimental System
     ================================================== */
 
-    .prototype-section {
+    .system-section {
       background: var(--soft-background);
+    }
+
+    .system-flow {
+      margin-top: 42px;
+
+      display: grid;
+
+      grid-template-columns:
+        1fr 42px
+        1fr 42px
+        1fr 42px
+        1fr;
+
+      align-items: stretch;
+    }
+
+    .flow-card {
+      min-height: 220px;
+
+      padding: 25px 22px;
+
+      background: #ffffff;
+
+      border: 1px solid var(--border);
+      border-radius: 18px;
+    }
+
+    .flow-number {
+      margin-bottom: 18px;
+
+      color: var(--blue);
+
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .flow-card h3 {
+      margin: 0;
+
+      font-size: 19px;
+      line-height: 1.25;
+
+      letter-spacing: -0.02em;
+    }
+
+    .flow-card .flow-title-zh {
+      margin-top: 5px;
+
+      color: #515154;
+
+      font-size: 15px;
+      font-weight: 500;
+    }
+
+    .flow-card p {
+      margin: 13px 0 0;
+
+      color: var(--secondary);
+
+      font-size: 14px;
+      line-height: 1.65;
+    }
+
+    .flow-card .flow-description-zh {
+      margin-top: 6px;
+
+      color: var(--tertiary);
+
+      font-size: 13px;
+      line-height: 1.7;
+    }
+
+    .flow-arrow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      color: #a1a1a6;
+
+      font-size: 25px;
+      font-weight: 300;
+    }
+
+
+    /* ==================================================
+       Experimental image
+    ================================================== */
+
+    .prototype-image-block {
+      margin-top: 48px;
+    }
+
+    .subsection-heading {
+      margin-bottom: 22px;
+    }
+
+    .subsection-heading h3 {
+      margin: 0;
+
+      font-size: 25px;
+      letter-spacing: -0.025em;
+    }
+
+    .subsection-title-zh {
+      margin-top: 5px;
+
+      color: #515154;
+
+      font-size: 17px;
+      font-weight: 500;
     }
 
     .image-card {
       overflow: hidden;
 
-      border-radius: 20px;
+      border-radius: var(--card-radius);
+
       background: #fff;
 
       box-shadow:
@@ -400,7 +529,129 @@
 
     .prototype-image {
       width: 100%;
+
       display: block;
+    }
+
+
+    /* ==================================================
+       System validation
+    ================================================== */
+
+    .validation-grid {
+      margin-top: 28px;
+
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+
+      gap: 16px;
+    }
+
+    .validation-card {
+      padding: 24px;
+
+      background: #ffffff;
+
+      border: 1px solid var(--border);
+      border-radius: 16px;
+    }
+
+    .validation-value {
+      color: var(--blue);
+
+      font-size: 28px;
+      line-height: 1;
+      font-weight: 650;
+
+      letter-spacing: -0.03em;
+    }
+
+    .validation-title {
+      margin-top: 13px;
+
+      color: var(--text);
+
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    .validation-title-zh {
+      margin-top: 3px;
+
+      color: #515154;
+
+      font-size: 13px;
+      font-weight: 500;
+    }
+
+    .validation-text {
+      margin-top: 10px;
+
+      color: var(--secondary);
+
+      font-size: 13px;
+      line-height: 1.65;
+    }
+
+    .validation-text-zh {
+      margin-top: 4px;
+
+      color: var(--tertiary);
+
+      font-size: 12px;
+      line-height: 1.7;
+    }
+
+
+    /* ==================================================
+       Technical Note
+    ================================================== */
+
+    .research-note {
+      margin-top: 32px;
+
+      padding: 26px 28px;
+
+      background: #ffffff;
+
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--blue);
+
+      border-radius: 12px;
+    }
+
+    .research-note-title {
+      margin: 0;
+
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    .research-note-title-zh {
+      margin-top: 4px;
+
+      color: #515154;
+
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .research-note p {
+      margin: 11px 0 0;
+
+      color: var(--secondary);
+
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    .research-note .research-note-zh {
+      margin-top: 5px;
+
+      color: var(--tertiary);
+
+      font-size: 14px;
+      line-height: 1.75;
     }
 
 
@@ -457,6 +708,7 @@
       margin: 0;
 
       font-size: 21px;
+
       letter-spacing: -0.02em;
     }
 
@@ -497,7 +749,7 @@
     }
 
     .publication-list {
-      border-top: 1px solid #d7d7d9;
+      border-top: 1px solid var(--border-strong);
     }
 
     .publication {
@@ -508,7 +760,7 @@
 
       gap: 30px;
 
-      border-bottom: 1px solid #d7d7d9;
+      border-bottom: 1px solid var(--border-strong);
     }
 
     .publication-title {
@@ -519,6 +771,7 @@
       line-height: 1.5;
 
       font-weight: 600;
+
       letter-spacing: -0.01em;
     }
 
@@ -570,11 +823,13 @@
       text-align: center;
 
       color: #86868b;
+
       font-size: 13px;
     }
 
     .footer-zh {
       margin-top: 4px;
+
       font-size: 12px;
     }
 
@@ -582,6 +837,29 @@
     /* ==================================================
        Mobile
     ================================================== */
+
+    @media (max-width: 900px) {
+
+      .system-flow {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+
+      .flow-card {
+        min-height: auto;
+      }
+
+      .flow-arrow {
+        height: 24px;
+
+        transform: rotate(90deg);
+      }
+
+      .validation-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
 
     @media (max-width: 720px) {
 
@@ -636,6 +914,7 @@
 
       .publication {
         grid-template-columns: 1fr;
+
         gap: 13px;
       }
 
@@ -672,8 +951,8 @@
           Demo / 演示
         </a>
 
-        <a href="#prototype">
-          Prototype / 原型
+        <a href="#system">
+          System / 系统
         </a>
 
         <a href="#contributions">
@@ -739,6 +1018,10 @@
 
         <span class="tag">
           CP-OFDM
+        </span>
+
+        <span class="tag">
+          FPGA
         </span>
 
         <span class="tag">
@@ -943,12 +1226,12 @@
 
 
     <!-- ==================================================
-         Experimental Prototype
+         Experimental System
     ================================================== -->
 
     <section
-      id="prototype"
-      class="prototype-section"
+      id="system"
+      class="system-section"
     >
 
       <div class="container">
@@ -960,38 +1243,395 @@
           </div>
 
           <h2>
-            Prototype implementation
+            System architecture & experimental validation
           </h2>
 
           <div
             class="section-title-zh zh"
             lang="zh-CN"
           >
-            原型实现
+            系统架构与实验验证
           </div>
 
           <p class="section-description">
-            Experimental implementation of the pinching-antenna
-            wireless communication system for real-time video
-            transmission.
+            The prototype implements an end-to-end wireless video
+            communication link integrating FPGA-based OFDM signal
+            processing, AD9361 transceivers, 60 GHz frequency
+            conversion, a dielectric waveguide, and a pinching antenna.
           </p>
 
           <p
             class="section-description-zh zh"
             lang="zh-CN"
           >
-            面向实时视频传输的夹持天线无线通信系统实验原型。
+            该原型构建了一套端到端无线视频通信链路，集成 FPGA
+            OFDM 信号处理、AD9361 收发机、60 GHz 频率变换、
+            介质波导以及夹持天线。
           </p>
 
         </div>
 
-        <div class="image-card">
 
-          <img
-            src="demo.png"
-            class="prototype-image"
-            alt="Pinching antenna experimental prototype"
+
+        <!-- ==================================================
+             End-to-end signal chain
+        ================================================== -->
+
+        <div class="system-flow">
+
+
+          <!-- Step 1 -->
+
+          <div class="flow-card">
+
+            <div class="flow-number">
+              01
+            </div>
+
+            <h3>
+              Baseband Processing
+            </h3>
+
+            <div
+              class="flow-title-zh zh"
+              lang="zh-CN"
+            >
+              基带处理
+            </div>
+
+            <p>
+              The video data stream is processed on the FPGA
+              platform using OFDM-based baseband signal processing.
+            </p>
+
+            <p
+              class="flow-description-zh zh"
+              lang="zh-CN"
+            >
+              视频数据流在 FPGA 平台完成基于 OFDM 的基带信号处理。
+            </p>
+
+          </div>
+
+
+          <div class="flow-arrow">
+            →
+          </div>
+
+
+
+          <!-- Step 2 -->
+
+          <div class="flow-card">
+
+            <div class="flow-number">
+              02
+            </div>
+
+            <h3>
+              IF & 60 GHz RF
+            </h3>
+
+            <div
+              class="flow-title-zh zh"
+              lang="zh-CN"
+            >
+              中频与 60 GHz 射频
+            </div>
+
+            <p>
+              The signal is processed through the AD9361
+              transceiver and up-converted to the 60 GHz
+              millimeter-wave band.
+            </p>
+
+            <p
+              class="flow-description-zh zh"
+              lang="zh-CN"
+            >
+              信号经 AD9361 收发链路处理，并进一步上变频至
+              60 GHz 毫米波频段。
+            </p>
+
+          </div>
+
+
+          <div class="flow-arrow">
+            →
+          </div>
+
+
+
+          <!-- Step 3 -->
+
+          <div class="flow-card">
+
+            <div class="flow-number">
+              03
+            </div>
+
+            <h3>
+              Waveguide & Pinching Antenna
+            </h3>
+
+            <div
+              class="flow-title-zh zh"
+              lang="zh-CN"
+            >
+              介质波导与夹持天线
+            </div>
+
+            <p>
+              The 60 GHz signal is fed into the dielectric
+              waveguide and coupled out into free space through
+              the arc-shaped pinching antenna.
+            </p>
+
+            <p
+              class="flow-description-zh zh"
+              lang="zh-CN"
+            >
+              60 GHz 信号注入介质波导，并通过弧形夹持天线
+              将导波能量耦合并辐射到自由空间。
+            </p>
+
+          </div>
+
+
+          <div class="flow-arrow">
+            →
+          </div>
+
+
+
+          <!-- Step 4 -->
+
+          <div class="flow-card">
+
+            <div class="flow-number">
+              04
+            </div>
+
+            <h3>
+              Receive & Video Recovery
+            </h3>
+
+            <div
+              class="flow-title-zh zh"
+              lang="zh-CN"
+            >
+              接收与视频恢复
+            </div>
+
+            <p>
+              A horn antenna and down-converter recover the RF
+              signal. The AD9361 and FPGA perform receive
+              processing and send the decoded video stream to
+              a laptop via Ethernet.
+            </p>
+
+            <p
+              class="flow-description-zh zh"
+              lang="zh-CN"
+            >
+              接收端采用喇叭天线与下变频链路恢复射频信号，
+              再由 AD9361 和 FPGA 完成接收处理，并通过以太网
+              将解码后的视频数据发送至笔记本电脑显示。
+            </p>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- ==================================================
+             Prototype photograph
+        ================================================== -->
+
+        <div class="prototype-image-block">
+
+          <div class="subsection-heading">
+
+            <h3>
+              Experimental prototype
+            </h3>
+
+            <div
+              class="subsection-title-zh zh"
+              lang="zh-CN"
+            >
+              实验原型
+            </div>
+
+          </div>
+
+          <div class="image-card">
+
+            <img
+              src="demo.png"
+              class="prototype-image"
+              alt="60 GHz pinching antenna wireless video transmission prototype"
+            >
+
+          </div>
+
+        </div>
+
+
+
+        <!-- ==================================================
+             Validation summary
+        ================================================== -->
+
+        <div class="validation-grid">
+
+
+          <!-- 60 GHz -->
+
+          <div class="validation-card">
+
+            <div class="validation-value">
+              60 GHz
+            </div>
+
+            <div class="validation-title">
+              Millimeter-Wave Link
+            </div>
+
+            <div
+              class="validation-title-zh zh"
+              lang="zh-CN"
+            >
+              毫米波通信链路
+            </div>
+
+            <div class="validation-text">
+              End-to-end real-time video transmission is
+              demonstrated at 60 GHz.
+            </div>
+
+            <div
+              class="validation-text-zh zh"
+              lang="zh-CN"
+            >
+              在 60 GHz 频段完成端到端实时视频传输演示。
+            </div>
+
+          </div>
+
+
+
+          <!-- Three states -->
+
+          <div class="validation-card">
+
+            <div class="validation-value">
+              3 States
+            </div>
+
+            <div class="validation-title">
+              Pinching-Antenna Configurations
+            </div>
+
+            <div
+              class="validation-title-zh zh"
+              lang="zh-CN"
+            >
+              三种夹持天线状态
+            </div>
+
+            <div class="validation-text">
+              The arc pinching antenna is switched among three
+              representative states while the rest of the link
+              remains fixed.
+            </div>
+
+            <div
+              class="validation-text-zh zh"
+              lang="zh-CN"
+            >
+              在发射机、波导及接收机位置保持固定的条件下，
+              调整弧形夹持天线的三种代表性状态。
+            </div>
+
+          </div>
+
+
+
+          <!-- I/Q validation -->
+
+          <div class="validation-card">
+
+            <div class="validation-value">
+              I/Q
+            </div>
+
+            <div class="validation-title">
+              Received Signal Validation
+            </div>
+
+            <div
+              class="validation-title-zh zh"
+              lang="zh-CN"
+            >
+              接收信号验证
+            </div>
+
+            <div class="validation-text">
+              Changes in the received OFDM training-sequence
+              amplitude demonstrate the link-level impact of
+              the pinching-antenna state.
+            </div>
+
+            <div
+              class="validation-text-zh zh"
+              lang="zh-CN"
+            >
+              不同夹持天线状态对应的 OFDM 接收训练序列幅度变化，
+              验证了天线状态对通信链路的直接影响。
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- ==================================================
+             Research note
+        ================================================== -->
+
+        <div class="research-note">
+
+          <div class="research-note-title">
+            Geometry-aware experimental validation
+          </div>
+
+          <div
+            class="research-note-title-zh zh"
+            lang="zh-CN"
           >
+            几何感知实验验证
+          </div>
+
+          <p>
+            With the transmitter, dielectric waveguide, and receiver
+            kept fixed, changing the arc pinching-antenna state
+            modifies the radiation direction and consequently the
+            received signal strength. This provides a communication-level
+            validation of geometry-dependent radiation.
+          </p>
+
+          <p
+            class="research-note-zh zh"
+            lang="zh-CN"
+          >
+            在发射机、介质波导和接收端保持固定的情况下，
+            改变弧形夹持天线的状态会改变其辐射方向，
+            从而影响接收信号强度。该实验从通信链路层面验证了
+            夹持天线辐射特性对几何状态的依赖关系。
+          </p>
 
         </div>
 
@@ -1044,10 +1684,11 @@
         </p>
 
 
+
         <div class="contribution-grid">
 
 
-          <!-- CP-OFDM -->
+          <!-- Contribution 1 -->
 
           <div class="contribution-card">
 
@@ -1084,7 +1725,7 @@
 
 
 
-          <!-- Pinching Antenna -->
+          <!-- Contribution 2 -->
 
           <div class="contribution-card">
 
@@ -1165,16 +1806,18 @@
             class="section-description-zh zh"
             lang="zh-CN"
           >
-            与夹持天线系统的辐射特性、几何感知设计及实验验证相关的研究论文。
+            与夹持天线系统的辐射特性、几何感知设计及实验验证
+            相关的研究论文。
           </p>
 
         </div>
 
 
+
         <div class="publication-list">
 
 
-          <!-- IEEE Publication -->
+          <!-- IEEE -->
 
           <article class="publication">
 
@@ -1189,7 +1832,8 @@
                 class="publication-title-zh zh"
                 lang="zh-CN"
               >
-                夹持天线的几何依赖辐射特性：理论、仿真与测量
+                夹持天线的几何依赖辐射特性：
+                理论、仿真与测量
               </p>
 
               <p class="publication-source">
@@ -1211,7 +1855,7 @@
 
 
 
-          <!-- arXiv Publication -->
+          <!-- arXiv -->
 
           <article class="publication">
 
