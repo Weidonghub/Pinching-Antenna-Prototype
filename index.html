@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Pinching Antenna Prototype</title>
+  <title>Pinching Antenna Prototype | 夹持天线原型</title>
 
   <meta
     name="description"
@@ -16,6 +16,7 @@
     :root {
       --text: #1d1d1f;
       --secondary: #6e6e73;
+      --tertiary: #86868b;
       --background: #ffffff;
       --soft-background: #f5f5f7;
       --border: #e5e5e7;
@@ -43,6 +44,8 @@
         "SF Pro Text",
         "Helvetica Neue",
         Arial,
+        "PingFang SC",
+        "Microsoft YaHei",
         sans-serif;
 
       -webkit-font-smoothing: antialiased;
@@ -54,12 +57,23 @@
       margin: 0 auto;
     }
 
+    .zh {
+      font-family:
+        "PingFang SC",
+        "Hiragino Sans GB",
+        "Microsoft YaHei",
+        -apple-system,
+        BlinkMacSystemFont,
+        sans-serif;
+    }
+
+
     /* ==================================================
        Navigation
     ================================================== */
 
     nav {
-      height: 54px;
+      height: 56px;
       display: flex;
       align-items: center;
 
@@ -116,7 +130,7 @@
 
     .hero {
       text-align: center;
-      padding: 105px 0 90px;
+      padding: 100px 0 88px;
     }
 
     .eyebrow {
@@ -140,15 +154,35 @@
       font-weight: 700;
     }
 
+    .hero-title-zh {
+      margin-top: 14px;
+
+      color: #424245;
+
+      font-size: clamp(23px, 3vw, 30px);
+      font-weight: 500;
+      letter-spacing: 0.03em;
+    }
+
     .hero-description {
-      max-width: 720px;
-      margin: 26px auto 0;
+      max-width: 740px;
+      margin: 28px auto 0;
 
       color: var(--secondary);
 
       font-size: clamp(19px, 2.4vw, 23px);
       line-height: 1.5;
       letter-spacing: -0.01em;
+    }
+
+    .hero-description-zh {
+      max-width: 740px;
+      margin: 9px auto 0;
+
+      color: var(--tertiary);
+
+      font-size: 16px;
+      line-height: 1.7;
     }
 
     .hero-tags {
@@ -182,7 +216,7 @@
     }
 
     .section-header {
-      max-width: 780px;
+      max-width: 800px;
       margin-bottom: 40px;
     }
 
@@ -204,6 +238,15 @@
       letter-spacing: -0.035em;
     }
 
+    .section-title-zh {
+      margin: 9px 0 0;
+
+      color: #515154;
+
+      font-size: 20px;
+      font-weight: 500;
+    }
+
     .section-description {
       max-width: 740px;
       margin: 17px 0 0;
@@ -212,6 +255,16 @@
 
       font-size: 18px;
       line-height: 1.65;
+    }
+
+    .section-description-zh {
+      max-width: 740px;
+      margin: 7px 0 0;
+
+      color: var(--tertiary);
+
+      font-size: 15px;
+      line-height: 1.75;
     }
 
 
@@ -285,14 +338,32 @@
       letter-spacing: -0.02em;
     }
 
+    .demo-title-zh {
+      margin-top: 5px;
+
+      color: #515154;
+
+      font-size: 17px;
+      font-weight: 500;
+    }
+
     .demo-info p {
-      max-width: 720px;
-      margin: 9px 0 0;
+      max-width: 740px;
+      margin: 10px 0 0;
 
       color: var(--secondary);
 
       font-size: 16px;
       line-height: 1.6;
+    }
+
+    .demo-info .description-zh {
+      margin-top: 5px;
+
+      color: var(--tertiary);
+
+      font-size: 14px;
+      line-height: 1.7;
     }
 
     .video-container {
@@ -338,14 +409,23 @@
     ================================================== */
 
     .contribution-intro {
-      max-width: 800px;
-
-      margin: 0 0 36px;
+      max-width: 820px;
+      margin: 0;
 
       color: #424245;
 
       font-size: 19px;
       line-height: 1.65;
+    }
+
+    .contribution-intro-zh {
+      max-width: 820px;
+      margin: 8px 0 36px;
+
+      color: var(--tertiary);
+
+      font-size: 15px;
+      line-height: 1.75;
     }
 
     .contribution-grid {
@@ -374,19 +454,37 @@
     }
 
     .contribution-card h3 {
-      margin: 0 0 10px;
+      margin: 0;
 
       font-size: 21px;
       letter-spacing: -0.02em;
     }
 
+    .contribution-card .card-title-zh {
+      margin-top: 5px;
+
+      color: #515154;
+
+      font-size: 16px;
+      font-weight: 500;
+    }
+
     .contribution-card p {
-      margin: 0;
+      margin: 12px 0 0;
 
       color: var(--secondary);
 
       font-size: 16px;
       line-height: 1.6;
+    }
+
+    .contribution-card .card-description-zh {
+      margin-top: 6px;
+
+      color: var(--tertiary);
+
+      font-size: 14px;
+      line-height: 1.7;
     }
 
 
@@ -424,8 +522,18 @@
       letter-spacing: -0.01em;
     }
 
+    .publication-title-zh {
+      max-width: 800px;
+      margin: 7px 0 0;
+
+      color: #515154;
+
+      font-size: 15px;
+      line-height: 1.65;
+    }
+
     .publication-source {
-      margin: 8px 0 0;
+      margin: 9px 0 0;
 
       color: var(--secondary);
 
@@ -465,6 +573,11 @@
       font-size: 13px;
     }
 
+    .footer-zh {
+      margin-top: 4px;
+      font-size: 12px;
+    }
+
 
     /* ==================================================
        Mobile
@@ -486,7 +599,7 @@
       }
 
       .hero-description {
-        margin-top: 21px;
+        margin-top: 22px;
       }
 
       section {
@@ -537,9 +650,10 @@
 
 <body>
 
+
   <!-- ==================================================
        Navigation
-  =================================================== -->
+  ================================================== -->
 
   <nav>
 
@@ -555,19 +669,19 @@
       <div class="nav-links">
 
         <a href="#demo">
-          Demo
+          Demo / 演示
         </a>
 
         <a href="#prototype">
-          Prototype
+          Prototype / 原型
         </a>
 
         <a href="#contributions">
-          Contributions
+          Contributions / 贡献
         </a>
 
         <a href="#publications">
-          Publications
+          Publications / 论文
         </a>
 
       </div>
@@ -580,23 +694,37 @@
 
   <!-- ==================================================
        Hero
-  =================================================== -->
+  ================================================== -->
 
   <header class="hero">
 
     <div class="container">
 
       <div class="eyebrow">
-        Experimental Wireless Prototype
+        Experimental Wireless Prototype · 实验无线通信原型
       </div>
 
       <h1>
         Pinching Antenna Prototype
       </h1>
 
+      <div
+        class="hero-title-zh zh"
+        lang="zh-CN"
+      >
+        夹持天线原型
+      </div>
+
       <p class="hero-description">
         A 60 GHz wireless video transmission prototype
         using a pinching antenna.
+      </p>
+
+      <p
+        class="hero-description-zh zh"
+        lang="zh-CN"
+      >
+        基于夹持天线的 60 GHz 无线视频传输原型。
       </p>
 
       <div class="hero-tags">
@@ -606,7 +734,7 @@
         </span>
 
         <span class="tag">
-          Pinching Antenna
+          Pinching Antenna · 夹持天线
         </span>
 
         <span class="tag">
@@ -614,7 +742,7 @@
         </span>
 
         <span class="tag">
-          Wireless Video Transmission
+          Wireless Video Transmission · 无线视频传输
         </span>
 
       </div>
@@ -630,7 +758,7 @@
 
     <!-- ==================================================
          Demo
-    =================================================== -->
+    ================================================== -->
 
     <section id="demo">
 
@@ -639,16 +767,30 @@
         <div class="section-header">
 
           <div class="section-label">
-            Prototype Demonstrations
+            Prototype Demonstrations · 原型演示
           </div>
 
           <h2>
             Over-the-air video transmission
           </h2>
 
+          <div
+            class="section-title-zh zh"
+            lang="zh-CN"
+          >
+            无线空口视频传输
+          </div>
+
           <p class="section-description">
             Experimental demonstrations of real-time wireless video
             transmission using the pinching-antenna prototype.
+          </p>
+
+          <p
+            class="section-description-zh zh"
+            lang="zh-CN"
+          >
+            基于夹持天线原型进行实时无线视频传输的实验演示。
           </p>
 
         </div>
@@ -657,7 +799,7 @@
 
         <!-- ==================================================
              60 GHz Demo
-        =================================================== -->
+        ================================================== -->
 
         <article class="demo-card">
 
@@ -670,7 +812,7 @@
               </span>
 
               <span class="demo-role">
-                Primary Demo
+                Primary Demo · 主要演示
               </span>
 
             </div>
@@ -679,10 +821,25 @@
               Millimeter-Wave Prototype
             </h3>
 
+            <div
+              class="demo-title-zh zh"
+              lang="zh-CN"
+            >
+              毫米波原型
+            </div>
+
             <p>
               Real-time wireless video transmission using a
               pinching antenna at the transmitter and a horn
               antenna at the receiver.
+            </p>
+
+            <p
+              class="description-zh zh"
+              lang="zh-CN"
+            >
+              采用夹持天线作为发射天线、喇叭天线作为接收天线，
+              实现实时无线视频传输。
             </p>
 
           </div>
@@ -713,7 +870,7 @@
 
         <!-- ==================================================
              6 GHz Demo
-        =================================================== -->
+        ================================================== -->
 
         <article class="demo-card">
 
@@ -726,7 +883,7 @@
               </span>
 
               <span class="demo-role">
-                Supplementary Demo
+                Supplementary Demo · 补充演示
               </span>
 
             </div>
@@ -735,10 +892,24 @@
               Microwave Prototype
             </h3>
 
+            <div
+              class="demo-title-zh zh"
+              lang="zh-CN"
+            >
+              微波频段原型
+            </div>
+
             <p>
               An additional real-time wireless video transmission
               demonstration using the pinching-antenna prototype
               operating at 6 GHz.
+            </p>
+
+            <p
+              class="description-zh zh"
+              lang="zh-CN"
+            >
+              在 6 GHz 工作频率下进行的夹持天线实时无线视频传输补充演示。
             </p>
 
           </div>
@@ -773,7 +944,7 @@
 
     <!-- ==================================================
          Experimental Prototype
-    =================================================== -->
+    ================================================== -->
 
     <section
       id="prototype"
@@ -785,17 +956,31 @@
         <div class="section-header">
 
           <div class="section-label">
-            Experimental System
+            Experimental System · 实验系统
           </div>
 
           <h2>
             Prototype implementation
           </h2>
 
+          <div
+            class="section-title-zh zh"
+            lang="zh-CN"
+          >
+            原型实现
+          </div>
+
           <p class="section-description">
             Experimental implementation of the pinching-antenna
             wireless communication system for real-time video
             transmission.
+          </p>
+
+          <p
+            class="section-description-zh zh"
+            lang="zh-CN"
+          >
+            面向实时视频传输的夹持天线无线通信系统实验原型。
           </p>
 
         </div>
@@ -818,7 +1003,7 @@
 
     <!-- ==================================================
          My Contributions
-    =================================================== -->
+    ================================================== -->
 
     <section id="contributions">
 
@@ -827,12 +1012,19 @@
         <div class="section-header">
 
           <div class="section-label">
-            Technical Contributions
+            Technical Contributions · 技术贡献
           </div>
 
           <h2>
             My Contributions
           </h2>
+
+          <div
+            class="section-title-zh zh"
+            lang="zh-CN"
+          >
+            我的贡献
+          </div>
 
         </div>
 
@@ -841,6 +1033,14 @@
           intermediate-frequency (IF) subsystems of the CP-OFDM
           transceiver, and contributed to the design of the
           pinching antenna.
+        </p>
+
+        <p
+          class="contribution-intro-zh zh"
+          lang="zh-CN"
+        >
+          设计并实现了 CP-OFDM 收发系统的基带与中频（IF）部分，
+          并参与了夹持天线的设计。
         </p>
 
 
@@ -859,10 +1059,25 @@
               CP-OFDM Transceiver
             </h3>
 
+            <div
+              class="card-title-zh zh"
+              lang="zh-CN"
+            >
+              CP-OFDM 收发系统
+            </div>
+
             <p>
               Designed and implemented the transmitter and receiver
               baseband and intermediate-frequency (IF) subsystems
               for the CP-OFDM wireless link.
+            </p>
+
+            <p
+              class="card-description-zh zh"
+              lang="zh-CN"
+            >
+              设计并实现了 CP-OFDM 无线链路发射端与接收端的
+              基带和中频（IF）子系统。
             </p>
 
           </div>
@@ -881,10 +1096,24 @@
               Pinching Antenna Design
             </h3>
 
+            <div
+              class="card-title-zh zh"
+              lang="zh-CN"
+            >
+              夹持天线设计
+            </div>
+
             <p>
               Contributed to the design of the pinching antenna
               used in the experimental wireless transmission
               prototype.
+            </p>
+
+            <p
+              class="card-description-zh zh"
+              lang="zh-CN"
+            >
+              参与了实验无线传输原型中夹持天线的设计。
             </p>
 
           </div>
@@ -900,7 +1129,7 @@
 
     <!-- ==================================================
          Publications
-    =================================================== -->
+    ================================================== -->
 
     <section
       id="publications"
@@ -912,17 +1141,31 @@
         <div class="section-header">
 
           <div class="section-label">
-            Research
+            Research · 研究成果
           </div>
 
           <h2>
             Related Publications
           </h2>
 
+          <div
+            class="section-title-zh zh"
+            lang="zh-CN"
+          >
+            相关论文
+          </div>
+
           <p class="section-description">
             Research publications related to the radiation
             characteristics, geometry-aware design, and
             experimental validation of pinching-antenna systems.
+          </p>
+
+          <p
+            class="section-description-zh zh"
+            lang="zh-CN"
+          >
+            与夹持天线系统的辐射特性、几何感知设计及实验验证相关的研究论文。
           </p>
 
         </div>
@@ -940,6 +1183,13 @@
               <p class="publication-title">
                 Geometry-Dependent Radiation of Pinching Antennas:
                 Theory, Simulation, and Measurement
+              </p>
+
+              <p
+                class="publication-title-zh zh"
+                lang="zh-CN"
+              >
+                夹持天线的几何依赖辐射特性：理论、仿真与测量
               </p>
 
               <p class="publication-source">
@@ -970,6 +1220,14 @@
               <p class="publication-title">
                 Unlocking Directional Radiation in Pinching-Antenna Systems:
                 Geometry-Aware Design and Experimental Verification
+              </p>
+
+              <p
+                class="publication-title-zh zh"
+                lang="zh-CN"
+              >
+                夹持天线系统定向辐射的实现：
+                几何感知设计与实验验证
               </p>
 
               <p class="publication-source">
@@ -1003,12 +1261,23 @@
 
   <!-- ==================================================
        Footer
-  =================================================== -->
+  ================================================== -->
 
   <footer>
 
     <div class="container">
-      Pinching Antenna Prototype · Research Prototype Portfolio
+
+      <div>
+        Pinching Antenna Prototype · Research Prototype Portfolio
+      </div>
+
+      <div
+        class="footer-zh zh"
+        lang="zh-CN"
+      >
+        夹持天线原型 · 科研原型展示
+      </div>
+
     </div>
 
   </footer>
