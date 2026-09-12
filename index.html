@@ -28,7 +28,7 @@
       --blue-hover: #004f9e;
       --blue-soft: #eaf4ff;
 
-      --card-radius: 20px;
+      --radius: 20px;
     }
 
     * {
@@ -152,7 +152,6 @@
 
       font-size: 15px;
       font-weight: 600;
-      letter-spacing: 0.01em;
     }
 
     .hero h1 {
@@ -185,8 +184,6 @@
 
       font-size: clamp(19px, 2.4vw, 23px);
       line-height: 1.5;
-
-      letter-spacing: -0.01em;
     }
 
     .hero-description-zh {
@@ -284,14 +281,14 @@
 
 
     /* ==================================================
-       Demo Cards
+       Demo
     ================================================== */
 
     .demo-card {
       overflow: hidden;
 
       border: 1px solid var(--border);
-      border-radius: var(--card-radius);
+      border-radius: var(--radius);
 
       background: #ffffff;
 
@@ -398,6 +395,91 @@
 
 
     /* ==================================================
+       Contributions
+    ================================================== */
+
+    .contribution-intro {
+      max-width: 820px;
+      margin: 0;
+
+      color: #424245;
+
+      font-size: 19px;
+      line-height: 1.65;
+    }
+
+    .contribution-intro-zh {
+      max-width: 820px;
+      margin: 8px 0 36px;
+
+      color: var(--tertiary);
+
+      font-size: 15px;
+      line-height: 1.75;
+    }
+
+    .contribution-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+
+      gap: 20px;
+    }
+
+    .contribution-card {
+      padding: 30px;
+
+      border: 1px solid var(--border);
+      border-radius: 18px;
+
+      background: #ffffff;
+    }
+
+    .contribution-number {
+      margin-bottom: 18px;
+
+      color: var(--blue);
+
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .contribution-card h3 {
+      margin: 0;
+
+      font-size: 22px;
+
+      letter-spacing: -0.02em;
+    }
+
+    .card-title-zh {
+      margin-top: 5px;
+
+      color: #515154;
+
+      font-size: 16px;
+      font-weight: 500;
+    }
+
+    .contribution-card p {
+      margin: 12px 0 0;
+
+      color: var(--secondary);
+
+      font-size: 16px;
+      line-height: 1.65;
+    }
+
+    .card-description-zh {
+      margin-top: 6px !important;
+
+      color: var(--tertiary) !important;
+
+      font-size: 14px !important;
+      line-height: 1.75 !important;
+    }
+
+
+    /* ==================================================
        Experimental System
     ================================================== */
 
@@ -448,7 +530,7 @@
       letter-spacing: -0.02em;
     }
 
-    .flow-card .flow-title-zh {
+    .flow-title-zh {
       margin-top: 5px;
 
       color: #515154;
@@ -466,13 +548,13 @@
       line-height: 1.65;
     }
 
-    .flow-card .flow-description-zh {
-      margin-top: 6px;
+    .flow-description-zh {
+      margin-top: 6px !important;
 
-      color: var(--tertiary);
+      color: var(--tertiary) !important;
 
-      font-size: 13px;
-      line-height: 1.7;
+      font-size: 13px !important;
+      line-height: 1.7 !important;
     }
 
     .flow-arrow {
@@ -488,11 +570,11 @@
 
 
     /* ==================================================
-       Experimental image
+       Prototype Image
     ================================================== */
 
     .prototype-image-block {
-      margin-top: 48px;
+      margin-top: 52px;
     }
 
     .subsection-heading {
@@ -503,6 +585,7 @@
       margin: 0;
 
       font-size: 25px;
+
       letter-spacing: -0.025em;
     }
 
@@ -518,9 +601,9 @@
     .image-card {
       overflow: hidden;
 
-      border-radius: var(--card-radius);
+      border-radius: var(--radius);
 
-      background: #fff;
+      background: #ffffff;
 
       box-shadow:
         0 2px 8px rgba(0, 0, 0, 0.025),
@@ -535,217 +618,11 @@
 
 
     /* ==================================================
-       System validation
-    ================================================== */
-
-    .validation-grid {
-      margin-top: 28px;
-
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-
-      gap: 16px;
-    }
-
-    .validation-card {
-      padding: 24px;
-
-      background: #ffffff;
-
-      border: 1px solid var(--border);
-      border-radius: 16px;
-    }
-
-    .validation-value {
-      color: var(--blue);
-
-      font-size: 28px;
-      line-height: 1;
-      font-weight: 650;
-
-      letter-spacing: -0.03em;
-    }
-
-    .validation-title {
-      margin-top: 13px;
-
-      color: var(--text);
-
-      font-size: 15px;
-      font-weight: 600;
-    }
-
-    .validation-title-zh {
-      margin-top: 3px;
-
-      color: #515154;
-
-      font-size: 13px;
-      font-weight: 500;
-    }
-
-    .validation-text {
-      margin-top: 10px;
-
-      color: var(--secondary);
-
-      font-size: 13px;
-      line-height: 1.65;
-    }
-
-    .validation-text-zh {
-      margin-top: 4px;
-
-      color: var(--tertiary);
-
-      font-size: 12px;
-      line-height: 1.7;
-    }
-
-
-    /* ==================================================
-       Technical Note
-    ================================================== */
-
-    .research-note {
-      margin-top: 32px;
-
-      padding: 26px 28px;
-
-      background: #ffffff;
-
-      border: 1px solid var(--border);
-      border-left: 3px solid var(--blue);
-
-      border-radius: 12px;
-    }
-
-    .research-note-title {
-      margin: 0;
-
-      font-size: 16px;
-      font-weight: 600;
-    }
-
-    .research-note-title-zh {
-      margin-top: 4px;
-
-      color: #515154;
-
-      font-size: 14px;
-      font-weight: 500;
-    }
-
-    .research-note p {
-      margin: 11px 0 0;
-
-      color: var(--secondary);
-
-      font-size: 15px;
-      line-height: 1.7;
-    }
-
-    .research-note .research-note-zh {
-      margin-top: 5px;
-
-      color: var(--tertiary);
-
-      font-size: 14px;
-      line-height: 1.75;
-    }
-
-
-    /* ==================================================
-       Contributions
-    ================================================== */
-
-    .contribution-intro {
-      max-width: 820px;
-      margin: 0;
-
-      color: #424245;
-
-      font-size: 19px;
-      line-height: 1.65;
-    }
-
-    .contribution-intro-zh {
-      max-width: 820px;
-      margin: 8px 0 36px;
-
-      color: var(--tertiary);
-
-      font-size: 15px;
-      line-height: 1.75;
-    }
-
-    .contribution-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-
-      gap: 20px;
-    }
-
-    .contribution-card {
-      padding: 28px;
-
-      border: 1px solid var(--border);
-      border-radius: 18px;
-
-      background: #ffffff;
-    }
-
-    .contribution-number {
-      margin-bottom: 18px;
-
-      color: var(--blue);
-
-      font-size: 13px;
-      font-weight: 600;
-    }
-
-    .contribution-card h3 {
-      margin: 0;
-
-      font-size: 21px;
-
-      letter-spacing: -0.02em;
-    }
-
-    .contribution-card .card-title-zh {
-      margin-top: 5px;
-
-      color: #515154;
-
-      font-size: 16px;
-      font-weight: 500;
-    }
-
-    .contribution-card p {
-      margin: 12px 0 0;
-
-      color: var(--secondary);
-
-      font-size: 16px;
-      line-height: 1.6;
-    }
-
-    .contribution-card .card-description-zh {
-      margin-top: 6px;
-
-      color: var(--tertiary);
-
-      font-size: 14px;
-      line-height: 1.7;
-    }
-
-
-    /* ==================================================
        Publications
     ================================================== */
 
     .publications-section {
-      background: var(--soft-background);
+      background: #ffffff;
     }
 
     .publication-list {
@@ -835,7 +712,7 @@
 
 
     /* ==================================================
-       Mobile
+       Responsive
     ================================================== */
 
     @media (max-width: 900px) {
@@ -854,10 +731,6 @@
 
         transform: rotate(90deg);
       }
-
-      .validation-grid {
-        grid-template-columns: 1fr;
-      }
     }
 
 
@@ -874,10 +747,6 @@
 
       .hero {
         padding: 76px 0 62px;
-      }
-
-      .hero-description {
-        margin-top: 22px;
       }
 
       section {
@@ -898,14 +767,6 @@
 
       .demo-info {
         padding: 23px 21px;
-      }
-
-      .demo-info h3 {
-        font-size: 21px;
-      }
-
-      .image-card {
-        border-radius: 16px;
       }
 
       .contribution-grid {
@@ -951,12 +812,12 @@
           Demo / 演示
         </a>
 
-        <a href="#system">
-          System / 系统
-        </a>
-
         <a href="#contributions">
           Contributions / 贡献
+        </a>
+
+        <a href="#system">
+          System / 系统
         </a>
 
         <a href="#publications">
@@ -1080,9 +941,7 @@
 
 
 
-        <!-- ==================================================
-             60 GHz Demo
-        ================================================== -->
+        <!-- 60 GHz -->
 
         <article class="demo-card">
 
@@ -1151,9 +1010,7 @@
 
 
 
-        <!-- ==================================================
-             6 GHz Demo
-        ================================================== -->
+        <!-- 6 GHz -->
 
         <article class="demo-card">
 
@@ -1226,6 +1083,128 @@
 
 
     <!-- ==================================================
+         My Contributions
+    ================================================== -->
+
+    <section id="contributions">
+
+      <div class="container">
+
+        <div class="section-header">
+
+          <div class="section-label">
+            Technical Contributions · 技术贡献
+          </div>
+
+          <h2>
+            My Contributions
+          </h2>
+
+          <div
+            class="section-title-zh zh"
+            lang="zh-CN"
+          >
+            我的贡献
+          </div>
+
+        </div>
+
+        <p class="contribution-intro">
+          Designed and implemented the baseband and
+          intermediate-frequency (IF) subsystems of the CP-OFDM
+          transceiver, and contributed to the design of the
+          pinching antenna.
+        </p>
+
+        <p
+          class="contribution-intro-zh zh"
+          lang="zh-CN"
+        >
+          设计并实现了 CP-OFDM 收发系统的基带与中频（IF）部分，
+          并参与了夹持天线的设计。
+        </p>
+
+
+        <div class="contribution-grid">
+
+
+          <div class="contribution-card">
+
+            <div class="contribution-number">
+              01
+            </div>
+
+            <h3>
+              CP-OFDM Transceiver
+            </h3>
+
+            <div
+              class="card-title-zh zh"
+              lang="zh-CN"
+            >
+              CP-OFDM 收发系统
+            </div>
+
+            <p>
+              Designed and implemented the transmitter and receiver
+              baseband and intermediate-frequency (IF) subsystems
+              for the CP-OFDM wireless link.
+            </p>
+
+            <p
+              class="card-description-zh zh"
+              lang="zh-CN"
+            >
+              设计并实现了 CP-OFDM 无线链路发射端与接收端的
+              基带和中频（IF）子系统。
+            </p>
+
+          </div>
+
+
+
+          <div class="contribution-card">
+
+            <div class="contribution-number">
+              02
+            </div>
+
+            <h3>
+              Pinching Antenna Design
+            </h3>
+
+            <div
+              class="card-title-zh zh"
+              lang="zh-CN"
+            >
+              夹持天线设计
+            </div>
+
+            <p>
+              Contributed to the design of the pinching antenna
+              used in the experimental wireless transmission
+              prototype.
+            </p>
+
+            <p
+              class="card-description-zh zh"
+              lang="zh-CN"
+            >
+              参与了实验无线传输原型中夹持天线的设计。
+            </p>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ==================================================
          Experimental System
     ================================================== -->
 
@@ -1243,21 +1222,21 @@
           </div>
 
           <h2>
-            System architecture & experimental validation
+            System architecture
           </h2>
 
           <div
             class="section-title-zh zh"
             lang="zh-CN"
           >
-            系统架构与实验验证
+            系统架构
           </div>
 
           <p class="section-description">
-            The prototype implements an end-to-end wireless video
-            communication link integrating FPGA-based OFDM signal
-            processing, AD9361 transceivers, 60 GHz frequency
-            conversion, a dielectric waveguide, and a pinching antenna.
+            An end-to-end wireless video communication prototype
+            integrating FPGA-based CP-OFDM signal processing,
+            AD9361 transceivers, 60 GHz frequency conversion,
+            a dielectric waveguide, and a pinching antenna.
           </p>
 
           <p
@@ -1265,17 +1244,13 @@
             lang="zh-CN"
           >
             该原型构建了一套端到端无线视频通信链路，集成 FPGA
-            OFDM 信号处理、AD9361 收发机、60 GHz 频率变换、
+            CP-OFDM 信号处理、AD9361 收发机、60 GHz 频率变换、
             介质波导以及夹持天线。
           </p>
 
         </div>
 
 
-
-        <!-- ==================================================
-             End-to-end signal chain
-        ================================================== -->
 
         <div class="system-flow">
 
@@ -1301,14 +1276,14 @@
 
             <p>
               The video data stream is processed on the FPGA
-              platform using OFDM-based baseband signal processing.
+              platform using CP-OFDM baseband signal processing.
             </p>
 
             <p
               class="flow-description-zh zh"
               lang="zh-CN"
             >
-              视频数据流在 FPGA 平台完成基于 OFDM 的基带信号处理。
+              视频数据流在 FPGA 平台完成基于 CP-OFDM 的基带信号处理。
             </p>
 
           </div>
@@ -1445,10 +1420,6 @@
 
 
 
-        <!-- ==================================================
-             Prototype photograph
-        ================================================== -->
-
         <div class="prototype-image-block">
 
           <div class="subsection-heading">
@@ -1475,290 +1446,6 @@
             >
 
           </div>
-
-        </div>
-
-
-
-        <!-- ==================================================
-             Validation summary
-        ================================================== -->
-
-        <div class="validation-grid">
-
-
-          <!-- 60 GHz -->
-
-          <div class="validation-card">
-
-            <div class="validation-value">
-              60 GHz
-            </div>
-
-            <div class="validation-title">
-              Millimeter-Wave Link
-            </div>
-
-            <div
-              class="validation-title-zh zh"
-              lang="zh-CN"
-            >
-              毫米波通信链路
-            </div>
-
-            <div class="validation-text">
-              End-to-end real-time video transmission is
-              demonstrated at 60 GHz.
-            </div>
-
-            <div
-              class="validation-text-zh zh"
-              lang="zh-CN"
-            >
-              在 60 GHz 频段完成端到端实时视频传输演示。
-            </div>
-
-          </div>
-
-
-
-          <!-- Three states -->
-
-          <div class="validation-card">
-
-            <div class="validation-value">
-              3 States
-            </div>
-
-            <div class="validation-title">
-              Pinching-Antenna Configurations
-            </div>
-
-            <div
-              class="validation-title-zh zh"
-              lang="zh-CN"
-            >
-              三种夹持天线状态
-            </div>
-
-            <div class="validation-text">
-              The arc pinching antenna is switched among three
-              representative states while the rest of the link
-              remains fixed.
-            </div>
-
-            <div
-              class="validation-text-zh zh"
-              lang="zh-CN"
-            >
-              在发射机、波导及接收机位置保持固定的条件下，
-              调整弧形夹持天线的三种代表性状态。
-            </div>
-
-          </div>
-
-
-
-          <!-- I/Q validation -->
-
-          <div class="validation-card">
-
-            <div class="validation-value">
-              I/Q
-            </div>
-
-            <div class="validation-title">
-              Received Signal Validation
-            </div>
-
-            <div
-              class="validation-title-zh zh"
-              lang="zh-CN"
-            >
-              接收信号验证
-            </div>
-
-            <div class="validation-text">
-              Changes in the received OFDM training-sequence
-              amplitude demonstrate the link-level impact of
-              the pinching-antenna state.
-            </div>
-
-            <div
-              class="validation-text-zh zh"
-              lang="zh-CN"
-            >
-              不同夹持天线状态对应的 OFDM 接收训练序列幅度变化，
-              验证了天线状态对通信链路的直接影响。
-            </div>
-
-          </div>
-
-        </div>
-
-
-
-        <!-- ==================================================
-             Research note
-        ================================================== -->
-
-        <div class="research-note">
-
-          <div class="research-note-title">
-            Geometry-aware experimental validation
-          </div>
-
-          <div
-            class="research-note-title-zh zh"
-            lang="zh-CN"
-          >
-            几何感知实验验证
-          </div>
-
-          <p>
-            With the transmitter, dielectric waveguide, and receiver
-            kept fixed, changing the arc pinching-antenna state
-            modifies the radiation direction and consequently the
-            received signal strength. This provides a communication-level
-            validation of geometry-dependent radiation.
-          </p>
-
-          <p
-            class="research-note-zh zh"
-            lang="zh-CN"
-          >
-            在发射机、介质波导和接收端保持固定的情况下，
-            改变弧形夹持天线的状态会改变其辐射方向，
-            从而影响接收信号强度。该实验从通信链路层面验证了
-            夹持天线辐射特性对几何状态的依赖关系。
-          </p>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-
-    <!-- ==================================================
-         My Contributions
-    ================================================== -->
-
-    <section id="contributions">
-
-      <div class="container">
-
-        <div class="section-header">
-
-          <div class="section-label">
-            Technical Contributions · 技术贡献
-          </div>
-
-          <h2>
-            My Contributions
-          </h2>
-
-          <div
-            class="section-title-zh zh"
-            lang="zh-CN"
-          >
-            我的贡献
-          </div>
-
-        </div>
-
-        <p class="contribution-intro">
-          Designed and implemented the baseband and
-          intermediate-frequency (IF) subsystems of the CP-OFDM
-          transceiver, and contributed to the design of the
-          pinching antenna.
-        </p>
-
-        <p
-          class="contribution-intro-zh zh"
-          lang="zh-CN"
-        >
-          设计并实现了 CP-OFDM 收发系统的基带与中频（IF）部分，
-          并参与了夹持天线的设计。
-        </p>
-
-
-
-        <div class="contribution-grid">
-
-
-          <!-- Contribution 1 -->
-
-          <div class="contribution-card">
-
-            <div class="contribution-number">
-              01
-            </div>
-
-            <h3>
-              CP-OFDM Transceiver
-            </h3>
-
-            <div
-              class="card-title-zh zh"
-              lang="zh-CN"
-            >
-              CP-OFDM 收发系统
-            </div>
-
-            <p>
-              Designed and implemented the transmitter and receiver
-              baseband and intermediate-frequency (IF) subsystems
-              for the CP-OFDM wireless link.
-            </p>
-
-            <p
-              class="card-description-zh zh"
-              lang="zh-CN"
-            >
-              设计并实现了 CP-OFDM 无线链路发射端与接收端的
-              基带和中频（IF）子系统。
-            </p>
-
-          </div>
-
-
-
-          <!-- Contribution 2 -->
-
-          <div class="contribution-card">
-
-            <div class="contribution-number">
-              02
-            </div>
-
-            <h3>
-              Pinching Antenna Design
-            </h3>
-
-            <div
-              class="card-title-zh zh"
-              lang="zh-CN"
-            >
-              夹持天线设计
-            </div>
-
-            <p>
-              Contributed to the design of the pinching antenna
-              used in the experimental wireless transmission
-              prototype.
-            </p>
-
-            <p
-              class="card-description-zh zh"
-              lang="zh-CN"
-            >
-              参与了实验无线传输原型中夹持天线的设计。
-            </p>
-
-          </div>
-
 
         </div>
 
@@ -1797,17 +1484,16 @@
           </div>
 
           <p class="section-description">
-            Research publications related to the radiation
-            characteristics, geometry-aware design, and
-            experimental validation of pinching-antenna systems.
+            Research publications related to pinching-antenna
+            radiation, geometry-aware design, and experimental
+            validation.
           </p>
 
           <p
             class="section-description-zh zh"
             lang="zh-CN"
           >
-            与夹持天线系统的辐射特性、几何感知设计及实验验证
-            相关的研究论文。
+            与夹持天线辐射特性、几何感知设计及实验验证相关的研究论文。
           </p>
 
         </div>
@@ -1816,8 +1502,6 @@
 
         <div class="publication-list">
 
-
-          <!-- IEEE -->
 
           <article class="publication">
 
@@ -1854,8 +1538,6 @@
           </article>
 
 
-
-          <!-- arXiv -->
 
           <article class="publication">
 
