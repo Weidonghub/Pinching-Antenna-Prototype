@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Pinching Antenna Prototype</title>
+
+  <meta
+    name="description"
+    content="A 60 GHz wireless video transmission prototype using a pinching antenna."
+  >
+
+  <style>
+    :root {
+      --text: #1d1d1f;
+      --secondary: #6e6e73;
+      --background: #ffffff;
+      --soft-background: #f5f5f7;
+      --border: #e5e5e7;
+      --blue: #0071e3;
+      --blue-hover: #0077ed;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--background);
+      color: var(--text);
+
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "SF Pro Display",
+        "SF Pro Text",
+        "Helvetica Neue",
+        Arial,
+        sans-serif;
+
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.5;
+    }
+
+    .container {
+      width: min(1080px, calc(100% - 48px));
+      margin: 0 auto;
+    }
+
+    /* --------------------------------------------------
+       Navigation
+    -------------------------------------------------- */
+
+    nav {
+      height: 52px;
+      display: flex;
+      align-items: center;
+
+      background: rgba(255, 255, 255, 0.88);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+
+      border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav-inner {
+      width: min(1080px, calc(100% - 48px));
+      margin: 0 auto;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 24px;
+    }
+
+    .nav-links a {
+      font-size: 13px;
+      color: var(--secondary);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--text);
+    }
+
+    /* --------------------------------------------------
+       Hero
+    -------------------------------------------------- */
+
+    .hero {
+      text-align: center;
+      padding: 110px 0 90px;
+    }
+
+    .eyebrow {
+      margin-bottom: 14px;
+
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--blue);
+    }
+
+    .hero h1 {
+      margin: 0 auto;
+
+      max-width: 900px;
+
+      font-size: clamp(46px, 7vw, 74px);
+      line-height: 1.03;
+      letter-spacing: -0.045em;
+      font-weight: 700;
+    }
+
+    .hero-description {
+      max-width: 720px;
+      margin: 28px auto 0;
+
+      font-size: clamp(19px, 2.5vw, 24px);
+      line-height: 1.45;
+      letter-spacing: -0.01em;
+      color: var(--secondary);
+    }
+
+    .hero-tags {
+      margin-top: 34px;
+
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+
+      padding: 8px 14px;
+
+      border-radius: 999px;
+      background: var(--soft-background);
+
+      font-size: 13px;
+      font-weight: 500;
+      color: #515154;
+    }
+
+    /* --------------------------------------------------
+       Sections
+    -------------------------------------------------- */
+
+    section {
+      padding: 90px 0;
+    }
+
+    .section-header {
+      max-width: 760px;
+      margin-bottom: 42px;
+    }
+
+    .section-label {
+      margin-bottom: 10px;
+
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--blue);
+    }
+
+    h2 {
+      margin: 0;
+
+      font-size: clamp(34px, 5vw, 48px);
+      line-height: 1.08;
+      letter-spacing: -0.035em;
+    }
+
+    .section-description {
+      max-width: 720px;
+      margin: 18px 0 0;
+
+      font-size: 18px;
+      line-height: 1.6;
+      color: var(--secondary);
+    }
+
+    /* --------------------------------------------------
+       Demo Cards
+    -------------------------------------------------- */
+
+    .demo-card {
+      overflow: hidden;
+
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      background: #fff;
+
+      box-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.03),
+        0 20px 55px rgba(0, 0, 0, 0.06);
+    }
+
+    .demo-card + .demo-card {
+      margin-top: 64px;
+    }
+
+    .demo-info {
+      padding: 30px 34px 28px;
+
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+      align-items: flex-start;
+    }
+
+    .demo-title-area {
+      flex: 1;
+    }
+
+    .frequency-badge {
+      display: inline-flex;
+      align-items: center;
+
+      margin-bottom: 12px;
+      padding: 6px 11px;
+
+      border-radius: 999px;
+
+      background: #eaf4ff;
+      color: #0066cc;
+
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+    }
+
+    .demo-info h3 {
+      margin: 0;
+
+      font-size: 25px;
+      letter-spacing: -0.02em;
+    }
+
+    .demo-info p {
+      max-width: 650px;
+      margin: 9px 0 0;
+
+      font-size: 16px;
+      line-height: 1.55;
+      color: var(--secondary);
+    }
+
+    .video-container {
+      background: #000;
+    }
+
+    video {
+      width: 100%;
+      max-height: 650px;
+
+      display: block;
+      background: #000;
+    }
+
+    /* --------------------------------------------------
+       Experimental Prototype
+    -------------------------------------------------- */
+
+    .prototype-section {
+      background: var(--soft-background);
+    }
+
+    .image-card {
+      overflow: hidden;
+
+      border-radius: 24px;
+      background: #fff;
+
+      box-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.03),
+        0 20px 55px rgba(0, 0, 0, 0.06);
+    }
+
+    .prototype-image {
+      width: 100%;
+      display: block;
+    }
+
+    /* --------------------------------------------------
+       Publications
+    -------------------------------------------------- */
+
+    .publication-list {
+      border-top: 1px solid var(--border);
+    }
+
+    .publication {
+      padding: 30px 0;
+
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 30px;
+
+      border-bottom: 1px solid var(--border);
+    }
+
+    .publication-title {
+      margin: 0;
+
+      max-width: 800px;
+
+      font-size: 19px;
+      line-height: 1.45;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+    }
+
+    .publication-source {
+      margin: 8px 0 0;
+
+      font-size: 15px;
+      color: var(--secondary);
+    }
+
+    .publication-link {
+      align-self: center;
+
+      white-space: nowrap;
+
+      color: var(--blue);
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 500;
+    }
+
+    .publication-link:hover {
+      color: var(--blue-hover);
+      text-decoration: underline;
+    }
+
+    /* --------------------------------------------------
+       Footer
+    -------------------------------------------------- */
+
+    footer {
+      padding: 45px 0;
+
+      border-top: 1px solid var(--border);
+
+      text-align: center;
+      color: #86868b;
+      font-size: 13px;
+    }
+
+    /* --------------------------------------------------
+       Mobile
+    -------------------------------------------------- */
+
+    @media (max-width: 720px) {
+
+      .container,
+      .nav-inner {
+        width: min(100% - 32px, 1080px);
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        padding: 78px 0 64px;
+      }
+
+      .hero-description {
+        margin-top: 22px;
+      }
+
+      section {
+        padding: 64px 0;
+      }
+
+      .section-header {
+        margin-bottom: 30px;
+      }
+
+      .demo-card {
+        border-radius: 18px;
+      }
+
+      .demo-card + .demo-card {
+        margin-top: 42px;
+      }
+
+      .demo-info {
+        padding: 24px 22px;
+      }
+
+      .demo-info h3 {
+        font-size: 22px;
+      }
+
+      .image-card {
+        border-radius: 18px;
+      }
+
+      .publication {
+        grid-template-columns: 1fr;
+        gap: 14px;
+      }
+
+      .publication-link {
+        justify-self: start;
+      }
+    }
+  </style>
+</head>
+
+
+<body>
+
+  <!-- Navigation -->
+
+  <nav>
+    <div class="nav-inner">
+
+      <a class="nav-title" href="#">
+        Pinching Antenna Prototype
+      </a>
+
+      <div class="nav-links">
+        <a href="#demo">Demo</a>
+        <a href="#prototype">Prototype</a>
+        <a href="#publications">Publications</a>
+      </div>
+
+    </div>
+  </nav>
+
+
+  <!-- Hero -->
+
+  <header class="hero">
+
+    <div class="container">
+
+      <div class="eyebrow">
+        Experimental Wireless Prototype
+      </div>
+
+      <h1>
+        Pinching Antenna Prototype
+      </h1>
+
+      <p class="hero-description">
+        A 60 GHz wireless video transmission prototype
+        using a pinching antenna.
+      </p>
+
+      <div class="hero-tags">
+        <span class="tag">60 GHz</span>
+        <span class="tag">Pinching Antenna</span>
+        <span class="tag">Wireless Video Transmission</span>
+        <span class="tag">Experimental Prototype</span>
+      </div>
+
+    </div>
+
+  </header>
+
+
+  <main>
+
+    <!-- ==================================================
+         Demo
+    =================================================== -->
+
+    <section id="demo">
+
+      <div class="container">
+
+        <div class="section-header">
+
+          <div class="section-label">
+            Prototype Demonstrations
+          </div>
+
+          <h2>
+            Over-the-air video transmission.
+          </h2>
+
+          <p class="section-description">
+            Experimental demonstrations of real-time wireless video
+            transmission using the pinching-antenna prototype.
+          </p>
+
+        </div>
+
+
+        <!-- 60 GHz Demo -->
+
+        <article class="demo-card">
+
+          <div class="demo-info">
+
+            <div class="demo-title-area">
+
+              <span class="frequency-badge">
+                60 GHz
+              </span>
+
+              <h3>
+                Millimeter-Wave Prototype
+              </h3>
+
+              <p>
+                Real-time wireless video transmission using a
+                pinching antenna at the transmitter and a horn
+                antenna at the receiver.
+              </p>
+
+            </div>
+
+          </div>
+
+          <div class="video-container">
+
+            <video
+              controls
+              playsinline
+              preload="metadata"
+              poster="demo.png"
+            >
+              <source src="demo.mp4" type="video/mp4">
+
+              Your browser does not support HTML5 video.
+            </video>
+
+          </div>
+
+        </article>
+
+
+        <!-- 6 GHz Demo -->
+
+        <article class="demo-card">
+
+          <div class="demo-info">
+
+            <div class="demo-title-area">
+
+              <span class="frequency-badge">
+                6 GHz
+              </span>
+
+              <h3>
+                Microwave Prototype
+              </h3>
+
+              <p>
+                An additional real-time wireless video transmission
+                demonstration using the pinching-antenna prototype
+                operating at 6 GHz.
+              </p>
+
+            </div>
+
+          </div>
+
+          <div class="video-container">
+
+            <video
+              controls
+              playsinline
+              preload="metadata"
+              poster="demo_6G.jpg"
+            >
+              <source src="demo_6G.mp4" type="video/mp4">
+
+              Your browser does not support HTML5 video.
+            </video>
+
+          </div>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- ==================================================
+         Experimental Prototype
+    =================================================== -->
+
+    <section
+      id="prototype"
+      class="prototype-section"
+    >
+
+      <div class="container">
+
+        <div class="section-header">
+
+          <div class="section-label">
+            Experimental Setup
+          </div>
+
+          <h2>
+            From concept to working prototype.
+          </h2>
+
+          <p class="section-description">
+            Experimental implementation of the pinching-antenna
+            wireless communication system.
+          </p>
+
+        </div>
+
+
+        <div class="image-card">
+
+          <img
+            src="demo.png"
+            class="prototype-image"
+            alt="Pinching antenna experimental prototype"
+          >
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ==================================================
+         Publications
+    =================================================== -->
+
+    <section id="publications">
+
+      <div class="container">
+
+        <div class="section-header">
+
+          <div class="section-label">
+            Research
+          </div>
+
+          <h2>
+            Related Publications
+          </h2>
+
+          <p class="section-description">
+            Research publications associated with the design,
+            radiation characteristics, and experimental validation
+            of pinching-antenna systems.
+          </p>
+
+        </div>
+
+
+        <div class="publication-list">
+
+          <!-- IEEE -->
+
+          <article class="publication">
+
+            <div>
+
+              <p class="publication-title">
+                Geometry-Dependent Radiation of Pinching Antennas:
+                Theory, Simulation, and Measurement
+              </p>
+
+              <p class="publication-source">
+                IEEE Journal Publication
+              </p>
+
+            </div>
+
+            <a
+              class="publication-link"
+              href="https://ieeexplore.ieee.org/document/11534827"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              IEEE Xplore ↗
+            </a>
+
+          </article>
+
+
+          <!-- arXiv -->
+
+          <article class="publication">
+
+            <div>
+
+              <p class="publication-title">
+                Unlocking Directional Radiation in Pinching-Antenna Systems:
+                Geometry-Aware Design and Experimental Verification
+              </p>
+
+              <p class="publication-source">
+                arXiv Preprint
+              </p>
+
+            </div>
+
+            <a
+              class="publication-link"
+              href="https://arxiv.org/abs/2607.24011"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              arXiv ↗
+            </a>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- Footer -->
+
+  <footer>
+
+    <div class="container">
+      Pinching Antenna Prototype
+    </div>
+
+  </footer>
+
+
+</body>
+
+</html>
