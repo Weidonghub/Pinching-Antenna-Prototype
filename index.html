@@ -629,15 +629,29 @@
       letter-spacing: -0.01em;
     }
 
-    .publication-title-zh {
-      max-width: 800px;
-      margin: 7px 0 0;
+.publication-authors {
+  max-width: 800px;
+  margin: 9px 0 0;
 
-      color: #515154;
+  color: #515154;
 
-      font-size: 15px;
-      line-height: 1.65;
-    }
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.publication-authors strong {
+  color: var(--text);
+  font-weight: 650;
+}
+
+.publication-venue {
+  margin: 5px 0 0;
+
+  color: var(--secondary);
+
+  font-size: 14px;
+  line-height: 1.6;
+}
 
     .publication-source {
       margin: 9px 0 0;
@@ -1418,124 +1432,130 @@
 
     </section>
 
+<!-- ==================================================
+     Publications
+================================================== -->
 
+<section
+  id="publications"
+  class="publications-section"
+>
 
-    <!-- ==================================================
-         Publications
-    ================================================== -->
+  <div class="container">
 
-    <section
-      id="publications"
-      class="publications-section"
-    >
+    <div class="section-header">
 
-      <div class="container">
+      <h2>
+        Related Publications
+      </h2>
 
-        <div class="section-header">
-
-          <h2>
-            Related Publications
-          </h2>
-
-          <div
-            class="section-title-zh zh"
-            lang="zh-CN"
-          >
-            相关论文
-          </div>
-
-          <p class="section-description">
-            Research publications related to pinching-antenna
-            radiation, geometry-aware design, and experimental
-            validation.
-          </p>
-
-          <p
-            class="section-description-zh zh"
-            lang="zh-CN"
-          >
-            与夹持天线辐射特性、几何特性设计及实验验证相关的研究论文。
-          </p>
-
-        </div>
-
-
-
-        <div class="publication-list">
-
-
-          <!-- IEEE Publication -->
-
-          <article class="publication">
-
-            <div>
-
-              <p class="publication-title">
-                Geometry-Dependent Radiation of Pinching Antennas:
-                Theory, Simulation, and Measurement
-              </p>
-
-              <p
-                class="publication-title-zh zh"
-                lang="zh-CN"
-              >
-                夹持天线辐射特性的几何依赖性：理论、仿真与测量
-              </p>
-
-            </div>
-
-            <a
-              class="publication-link"
-              href="https://ieeexplore.ieee.org/document/11534827"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              View Publication ↗
-            </a>
-
-          </article>
-
-
-
-          <!-- arXiv Publication -->
-
-          <article class="publication">
-
-            <div>
-
-              <p class="publication-title">
-                Unlocking Directional Radiation in Pinching-Antenna Systems:
-                Geometry-Aware Design and Experimental Verification
-              </p>
-
-              <p
-                class="publication-title-zh zh"
-                lang="zh-CN"
-              >
-                夹持天线系统定向辐射的实现：
-                基于几何特性的设计与实验验证
-              </p>
-
-            </div>
-
-            <a
-              class="publication-link"
-              href="https://arxiv.org/abs/2607.24011"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              View Preprint ↗
-            </a>
-
-          </article>
-
-
-        </div>
-
+      <div
+        class="section-title-zh zh"
+        lang="zh-CN"
+      >
+        相关论文
       </div>
 
-    </section>
+      <p class="section-description">
+        Research publications related to pinching-antenna
+        radiation, geometry-aware design, and experimental
+        validation.
+      </p>
 
+      <p
+        class="section-description-zh zh"
+        lang="zh-CN"
+      >
+        与夹持天线辐射特性、基于几何特性的设计及实验验证相关的研究论文。
+      </p>
+
+    </div>
+
+
+    <div class="publication-list">
+
+
+      <!-- IEEE Publication -->
+
+      <article class="publication">
+
+        <div>
+
+          <p class="publication-title">
+            Geometry-Dependent Radiation of Pinching Antennas:
+            Theory, Simulation, and Measurement
+          </p>
+
+          <p class="publication-authors">
+            H. Li,
+            <strong>W. Liu</strong>,
+            Z. Chen,
+            C. Song,
+            and G. Chen
+          </p>
+
+          <p class="publication-venue">
+            <em>IEEE Communications Letters</em>, 2026
+          </p>
+
+        </div>
+
+        <a
+          class="publication-link"
+          href="https://ieeexplore.ieee.org/document/11534827"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          View Publication ↗
+        </a>
+
+      </article>
+
+
+
+      <!-- arXiv Publication -->
+
+      <article class="publication">
+
+        <div>
+
+          <p class="publication-title">
+            Unlocking Directional Radiation in Pinching-Antenna Systems:
+            Geometry-Aware Design and Experimental Verification
+          </p>
+
+          <p class="publication-authors">
+            Haoyang Li,
+            <strong>Weidong Liu</strong>,
+            Zhongliang Li,
+            Gaojie Chen,
+            Zheng Yang,
+            and Zhiguo Ding
+          </p>
+
+          <p class="publication-venue">
+            <em>arXiv preprint</em>, 2026
+          </p>
+
+        </div>
+
+        <a
+          class="publication-link"
+          href="https://arxiv.org/abs/2607.24011"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          View Preprint ↗
+        </a>
+
+      </article>
+
+
+    </div>
+
+  </div>
+
+</section>
 
   </main>
 
